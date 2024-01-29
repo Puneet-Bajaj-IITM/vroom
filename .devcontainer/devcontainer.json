@@ -1,0 +1,14 @@
+{
+    "name": "Flutter",
+    "image": "github/codeql-action-runner:ubuntu-20.04",
+    "extensions": [
+      "dart-code.dart-code",
+      "dart-code.flutter"
+    ],
+    "runArgs": [
+      "-u",
+      "codespace"
+    ],
+    "postCreateCommand": "bash .devcontainer/post-create.sh"
+  }
+  
