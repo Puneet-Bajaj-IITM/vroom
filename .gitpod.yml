@@ -1,0 +1,20 @@
+# .gitpod.yml
+
+# Use the Dart SDK image with Flutter pre-installed
+image: dart:2.16
+
+# List of tasks that are run when the environment is built
+tasks:
+  - name: Install Flutter
+    command: |
+      git clone https://github.com/flutter/flutter.git /workspace/flutter
+      export PATH=$PATH:/workspace/flutter/bin
+      flutter config --no-analytics
+      flutter precache
+  - name: Run Flutter Doctor
+    command: flutter doctor
+
+# Specify ports to expose (for running a Flutter web server, for example)
+ports:
+  - port: 8080
+    onOpen: ignore
